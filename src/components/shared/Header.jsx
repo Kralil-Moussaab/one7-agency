@@ -1,19 +1,20 @@
 import { useState } from "react";
 import logo from "../../assets/logo.png";
+import Button from "../Button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between border-b border-1 border-gray-one7 bg-dark-one7 flex-wrap py-3 px-14 lg:px-24">
-      <img src={logo} className="w-100  mr-2" alt="Logo" />
+    <nav className="sticky top-0 z-40 flex items-center justify-between border-b border-1 border-gray-one7 bg-dark-one7 py-3 px-6 lg:px-24">
+      <img src={logo} className="w-32 mr-2" alt="Logo" />
       <div className="block lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+          className="flex items-center px-3 py-2 rounded text-white"
         >
           <svg
-            className={`fill-current h-5 w-5 text-white ${
+            className={`fill-current h-6 w-6 text-white ${
               isOpen ? "hidden" : "block"
             }`}
             viewBox="0 0 20 20"
@@ -22,7 +23,7 @@ export default function Header() {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
           <svg
-            className={`fill-current h-5 w-5 text-white ${
+            className={`fill-current h-6 w-6 text-white ${
               isOpen ? "block" : "hidden"
             }`}
             viewBox="0 0 20 20"
@@ -32,47 +33,46 @@ export default function Header() {
           </svg>
         </button>
       </div>
+
       <div
-        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${
+        className={`absolute top-full flex-grow left-0 w-full bg-dark-one7 lg:static lg:w-auto lg:flex lg:items-center lg:bg-transparent ${
           isOpen ? "block" : "hidden"
         }`}
       >
         <div className="text-md flex flex-col lg:flex-row justify-center items-center lg:flex-grow">
           <a
             href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white  font-semibold  hover:bg-gray-one7 py-2 px-4 rounded-md"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
           >
             Home
           </a>
           <a
             href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white  font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
           >
             Services
           </a>
           <a
             href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white  font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
           >
             Works
           </a>
           <a
             href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white  font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
           >
             Shop
           </a>
           <a
             href="#"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white  font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold hover:bg-gray-one7 py-2 px-4 rounded-md"
           >
             About
           </a>
         </div>
-        <div className="flex  justify-center items-center mt-3 lg:mt-0">
-          <button className="bg-gradient rounded-lg border-0 py-2 px-4 text-white">
-            Contact Us
-          </button>
+        <div className="flex justify-center items-center mt-4 lg:mt-0">
+          <Button content="Contact Us" />
         </div>
       </div>
     </nav>

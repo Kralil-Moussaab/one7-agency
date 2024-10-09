@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-green-blue": "linear-gradient(#6687B5, #60B58E)",
+        "gradient-green-blue": "linear-gradient(#60B58E,#6687B5)",
         "gradient-social":
           "linear-gradient(45deg, #242424,rgba(36, 36, 36, 0))",
       },

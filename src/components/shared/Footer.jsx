@@ -32,9 +32,9 @@ export default function Footer() {
             </a>
           </nav> */}
         </div>
-        <div className="flex items-center space-x-4 border border-1 rounded-md border-gray-one7">
+        <div className="flex items-center space-x-0 border border-1 rounded-md border-gray-one7">
           <span className="text-white ml-2">Stay Connected</span>
-          <div className="flex space-x-2 p-2">
+          <div className="flex space-x-1 md:space-x-2 p-2">
             <a
               href="#"
               className="bg-gradient-social flex justify-center  items-center p-2 rounded-md border border-1 border-gray-one7"
